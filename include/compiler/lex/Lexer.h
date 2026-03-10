@@ -1,5 +1,5 @@
-#ifndef COMPILER_LEX_H
-#define COMPILER_LEX_H
+#ifndef COMPILER_LEX_LEXER_H
+#define COMPILER_LEX_LEXER_H
 
 #include "compiler/tok/Tok.h"
 #include <memory>
@@ -9,15 +9,14 @@
 namespace compiler::lex {
 class Lexer final {
 public:
-  explicit Lexer(std::string &&sourceCode)
+  explicit Lexer(::std::string &&sourceCode)
       : sourceCode(std::move(sourceCode)) {}
 
   [[nodiscard]] auto run() const
       -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>>;
 
 private:
-  std::string sourceCode;
+  ::std::string sourceCode;
 };
 } // namespace compiler::lex
-
-#endif // COMPILER_LEX_H
+#endif // COMPILER_LEX_LEXER_H

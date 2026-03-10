@@ -1,5 +1,5 @@
-#ifndef COMPILER_TOK_H
-#define COMPILER_TOK_H
+#ifndef COMPILER_TOK_TOK_H
+#define COMPILER_TOK_TOK_H
 
 #include "compiler/tok/TokKind.h"
 
@@ -18,4 +18,4 @@ public:
   auto operator=(Tok &&) -> Tok & = delete;
 };
 } // namespace compiler::tok
-#endif // COMPILER_TOK_H
+#endif // COMPILER_TOK_TOK_H

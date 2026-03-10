@@ -1,6 +1,5 @@
 #include "compiler/lex/Lexer.h"
 #include "compiler/tok/Tok.h"
-#include "compiler/tok/types/F64.h"
 #include <algorithm>
 #include <memory>
 #include <string>
