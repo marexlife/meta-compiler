@@ -10,7 +10,7 @@ namespace compiler::lex {
 class Lexer final {
 public:
   explicit Lexer(::std::string &&sourceCode)
-      : sourceCode(std::move(sourceCode)) {}
+      : sourceCode(::std::move(sourceCode)) {}
 
   [[nodiscard]] auto run()
       -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>>;

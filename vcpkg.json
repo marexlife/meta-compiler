@@ -1,6 +1,7 @@
 {
     "name": "marex",
     "dependencies": [
+        "gtest",
         "abseil"
     ]
 }
