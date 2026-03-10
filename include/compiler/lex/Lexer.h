@@ -18,7 +18,6 @@ public:
 private:
   ::std::string sourceCode;
   ::std::string lastWord;
-  ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks;
 };
 } // namespace compiler::lex
 #endif // COMPILER_LEX_LEXER_H

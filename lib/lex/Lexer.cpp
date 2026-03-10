@@ -6,6 +6,8 @@
 
 namespace compiler::lex {
 auto Lexer::run() -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> {
+  ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks;
+
   ::std::ranges::for_each(sourceCode, [&](const auto current) {
     switch (current) {
     case ' ':
