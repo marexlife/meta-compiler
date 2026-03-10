@@ -2,15 +2,10 @@
 #include "compiler/tok/Tok.h"
 #include <algorithm>
 #include <memory>
-#include <string>
 #include <vector>
 
 namespace compiler::lex {
-auto Lexer::run() const
-    -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> {
-  ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks{};
-  ::std::string lastWord{};
-
+auto Lexer::run() -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> {
   ::std::ranges::for_each(sourceCode, [&](const auto current) {
     switch (current) {
     case ' ':
@@ -20,6 +15,6 @@ auto Lexer::run() const
     }
   });
 
-  return toks;
+  return std::move(toks);
 }
 } // namespace compiler::lex
