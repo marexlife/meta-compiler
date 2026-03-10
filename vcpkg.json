@@ -1,0 +1,6 @@
+{
+    "name": "marex",
+    "dependencies": [
+        "abseil"
+    ]
+}
