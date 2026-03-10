@@ -14,3 +14,7 @@ add_library(${PROJECT_NAME}
 target_link_directories(${PROJECT_NAME} PRIVATE
     ${COMPILER_FLAGS}
 )
+
+find_package(absl CONFIG REQUIRED)
+
+target_link_libraries(main PRIVATE absl::any absl::log absl::base absl::bits)
