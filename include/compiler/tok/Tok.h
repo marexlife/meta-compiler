@@ -7,10 +7,9 @@ namespace compiler::tok {
 class Tok {
 public:
   Tok() = default;
+  virtual ~Tok() = default;
 
   [[nodiscard]] virtual auto kind() const -> ::compiler::tok::TokKind = 0;
-
-  virtual ~Tok() = default;
 
   Tok(const Tok &) = delete;
   auto operator=(const Tok &) -> Tok & = delete;

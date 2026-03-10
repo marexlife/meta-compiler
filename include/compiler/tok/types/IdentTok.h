@@ -5,7 +5,7 @@
 #include "compiler/tok/TokKind.h"
 
 namespace compiler::tok::types {
-class Ident final : public ::compiler::tok::Tok {
+class IdentTok final : public ::compiler::tok::Tok {
   [[nodiscard]] auto kind() const -> ::compiler::tok::TokKind final {
     return ::compiler::tok::TokKind::Ident;
   }

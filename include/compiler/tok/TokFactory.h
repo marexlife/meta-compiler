@@ -15,7 +15,8 @@ public:
     if (name == "F64") {
       return ::std::make_unique<::compiler::tok::types::F64Tok>();
     }
-    return ::std::make_unique<::compiler::tok::types::Ident>();
+
+    return ::std::make_unique<::compiler::tok::types::IdentTok>();
   }
 };
 } // namespace compiler::tok

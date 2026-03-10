@@ -1,3 +1,3 @@
-#include "gtest/gtest.h"
+#include "Tester.h"
 
-auto main() -> int {}
+auto main() -> int { ::compiler::lex_tests::Tester{}.run(); }
