@@ -16,6 +16,8 @@ public:
       -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>>;
 
 private:
+  void flush(::std::vector<::std::unique_ptr<::compiler::tok::Tok>> &toks);
+
   ::std::string sourceCode;
   ::std::string lastWord;
 };
