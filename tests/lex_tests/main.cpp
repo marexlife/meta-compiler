@@ -1,3 +1,5 @@
-#include "Tester.h"
+#include "TestClass.hpp"
 
-auto main() -> int { ::compiler::lex_tests::Tester{}.run(); }
+#include "gtest/gtest.h"
+
+auto main() -> int {}

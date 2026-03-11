@@ -12,8 +12,7 @@ namespace meta_compiler {
 }
 } // namespace meta_compiler
 auto main() -> int {
-
-  ::std::string testCode = ::meta_compiler::getTestCode();
+  ::std::string testCode = ::std::string{::meta_compiler::getTestCode()};
 
   ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks =
       ::compiler::lex::Lexer{::std::move(testCode)}.run();
