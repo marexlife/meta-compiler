@@ -1,5 +1,5 @@
-#ifndef COMPILER_TOK_TOK_KIND_H
-#define COMPILER_TOK_TOK_KIND_H
+#ifndef COMPILER_TOK_TOK_KIND_HPP
+#define COMPILER_TOK_TOK_KIND_HPP
 
 #include <cstdint>
 
@@ -9,4 +9,4 @@ enum class TokKind : ::std::uint8_t {
   F64,
 };
 }
-#endif // COMPILER_TOK_TOK_KIND_H
+#endif // COMPILER_TOK_TOK_KIND_HPP

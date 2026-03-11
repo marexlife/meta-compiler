@@ -1,22 +1,19 @@
-#include "compiler/lex/Lexer.h"
-#include "compiler/tok/Tok.h"
+#include <compiler/lex/Lexer.hpp>
+#include <compiler/tok/Tok.hpp>
 #include <memory>
+#include <string_view>
 #include <vector>
 
+namespace meta_compiler {
+[[nodiscard]] consteval auto getTestCode() -> std::string_view {
+  return std::string_view{
+#include "TestClass.h"
+  };
+}
+} // namespace meta_compiler
 auto main() -> int {
-  ::std::string testCode =
-      R"(
-car := class:
-  BeginPlay() : void =
-    Print("Hello")
 
-Square(X : i32) : i32 = X * X
-
-Main(Args: []string) =
-  X : i32 = 1
-
-  Print("S {}", S)
-)";
+  ::std::string testCode = ::meta_compiler::getTestCode();
 
   ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks =
       ::compiler::lex::Lexer{::std::move(testCode)}.run();

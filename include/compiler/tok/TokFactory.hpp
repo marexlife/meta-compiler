@@ -1,7 +1,7 @@
-#ifndef COMPILER_TOK_TOK_FACTORY_H
-#define COMPILER_TOK_TOK_FACTORY_H
+#ifndef COMPILER_TOK_TOK_FACTORY_HPP
+#define COMPILER_TOK_TOK_FACTORY_HPP
 
-#include "Tok.h"
+#include <compiler/tok/Tok.hpp>
 #include <memory>
 #include <string_view>
 
@@ -13,4 +13,4 @@ public:
 };
 } // namespace compiler::tok
 
-#endif // COMPILER_TOK_TOK_FACTORY_H
+#endif // COMPILER_TOK_TOK_FACTORY_HPP

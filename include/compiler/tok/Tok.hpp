@@ -1,7 +1,7 @@
-#ifndef COMPILER_TOK_TOK_H
-#define COMPILER_TOK_TOK_H
+#ifndef META_COMPILER_TOK_TOK_HPP
+#define META_COMPILER_TOK_TOK_HPP
 
-#include "compiler/tok/TokKind.h"
+#include <compiler/tok/TokKind.hpp>
 
 namespace compiler::tok {
 class Tok {
@@ -17,4 +17,4 @@ public:
   auto operator=(Tok &&) -> Tok & = delete;
 };
 } // namespace compiler::tok
-#endif // COMPILER_TOK_TOK_H
+#endif // META_COMPILER_TOK_TOK_HPP

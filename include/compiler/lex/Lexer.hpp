@@ -1,7 +1,7 @@
-#ifndef COMPILER_LEX_LEXER_H
-#define COMPILER_LEX_LEXER_H
+#ifndef COMPILER_LEX_LEXER_HPP
+#define COMPILER_LEX_LEXER_HPP
 
-#include "compiler/tok/Tok.h"
+#include <compiler/tok/Tok.hpp>
 #include <memory>
 #include <string>
 #include <vector>
@@ -22,4 +22,4 @@ private:
   ::std::string lastWord;
 };
 } // namespace compiler::lex
-#endif // COMPILER_LEX_LEXER_H
+#endif // COMPILER_LEX_LEXER_HPP

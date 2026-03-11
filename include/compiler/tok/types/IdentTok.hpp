@@ -1,8 +1,8 @@
-#ifndef COMPILER_TOK_TYPES_IDENT_TOK_H
-#define COMPILER_TOK_TYPES_IDENT_TOK_H
+#ifndef META_COMPILER_TOK_TYPES_IDENT_TOK_HPP
+#define META_COMPILER_TOK_TYPES_IDENT_TOK_HPP
 
-#include "compiler/tok/Tok.h"
-#include "compiler/tok/TokKind.h"
+#include <compiler/tok/Tok.hpp>
+#include <compiler/tok/TokKind.hpp>
 
 namespace compiler::tok::types {
 class IdentTok final : public ::compiler::tok::Tok {
@@ -11,4 +11,4 @@ class IdentTok final : public ::compiler::tok::Tok {
   }
 };
 } // namespace compiler::tok::types
-#endif // COMPILER_TOK_TYPES_IDENT_TOK_H
+#endif // META_COMPILER_TOK_TYPES_IDENT_TOK_HPP
