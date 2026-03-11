@@ -1,7 +1,7 @@
 #ifndef META_COMPILER_TOK_TOK_HPP
 #define META_COMPILER_TOK_TOK_HPP
 
-#include <compiler/tok/TokKind.hpp>
+#include <meta-compiler/tok/TokKind.hpp>
 
 namespace compiler::tok {
 class Tok {

@@ -1,8 +1,8 @@
 #ifndef COMPILER_TOK_TYPES_F64_TOK_H
 #define COMPILER_TOK_TYPES_F64_TOK_H
 
-#include <compiler/tok/Tok.hpp>
-#include <compiler/tok/TokKind.hpp>
+#include <meta-compiler/tok/Tok.hpp>
+#include <meta-compiler/tok/TokKind.hpp>
 
 namespace compiler::tok::types {
 class F64Tok final : public ::compiler::tok::Tok {

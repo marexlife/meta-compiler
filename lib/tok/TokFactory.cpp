@@ -1,9 +1,13 @@
-#include "compiler/tok/TokFactory.h"
-#include "compiler/tok/types/F64Tok.h"
-#include "compiler/tok/types/IdentTok.h"
+#include <cstdint>
+#include <meta-compiler/tok/TokFactory.hpp>
+#include <meta-compiler/tok/types/F64Tok.hpp>
+#include <meta-compiler/tok/types/IdentTok.hpp>
 
-namespace compiler::tok {
-auto TokFactory::newTok(const ::std::string_view name)
+enum class FactoryIR : ::std::uint8_t {
+
+};
+
+auto ::meta_compiler::tok::TokFactory::newTok(const ::std::string_view name)
     -> ::std::unique_ptr<::compiler::tok::Tok> {
   if (name == "F64") {
     return ::std::make_unique<::compiler::tok::types::F64Tok>();
@@ -11,4 +15,3 @@ auto TokFactory::newTok(const ::std::string_view name)
 
   return ::std::make_unique<::compiler::tok::types::IdentTok>();
 }
-} // namespace compiler::tok

@@ -1,33 +1,27 @@
-#include "compiler/lex/Lexer.h"
-#include "compiler/tok/Tok.h"
-#include "compiler/tok/TokFactory.h"
 #include <algorithm>
+#include <meta-compiler/lex/Lexer.hpp>
+#include <meta-compiler/tok/Tok.hpp>
+#include <meta-compiler/tok/TokFactory.hpp>
 #include <memory>
 #include <vector>
 
-namespace compiler::lex {
-auto Lexer::run() -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> {
+auto ::meta_compiler::lex::Lexer::run()
+    -> ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> {
   ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> toks;
 
-  ::std::ranges::for_each(this->sourceCode, [&](const auto current) {
+  for (const auto current : sourceCode_) {
     switch (current) {
     case ' ':
-      this->flush(toks);
+      flush(toks);
       break;
     default:
-      this->lastWord.push_back(current);
+      lastWord_.push_back(current);
       break;
     }
-  });
+  }
 
-  this->flush(toks);
+  flush(toks);
 
   return std::move(toks);
 }
 
-void Lexer::flush(
-    ::std::vector<::std::unique_ptr<::compiler::tok::Tok>> &toks) {
-  toks.emplace_back(::compiler::tok::TokFactory::newTok(this->lastWord));
-  this->lastWord.clear();
-}
-} // namespace compiler::lex
