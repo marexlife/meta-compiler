@@ -1,0 +1,4 @@
+#ifndef META_COMPILER_STL_STL_HPP
+#define META_COMPILER_STL_STL_HPP
+#include <vector>
+#endif // META_COMPILER_STL_STL_HPP
