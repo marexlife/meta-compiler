@@ -7,8 +7,8 @@
 namespace compiler::tok::types {
 class F64Tok final : public ::compiler::tok::Tok {
 public:
-  [[nodiscard]] auto kind() const -> ::compiler::tok::TokKind final {
-    return ::compiler::tok::TokKind::F64;
+  [[nodiscard]] auto kind() const -> tok::TokKind final {
+    return tok::TokKind::F64;
   }
 };
 } // namespace compiler::tok::types

@@ -2,7 +2,11 @@
 #define COMPILER_LEX_ERROR_LEXER_ERROR_BASE_HPP
 namespace meta_compiler::lex::error {
 class LexerErrorBase {
-  
+public:
+  LexerErrorBase(const LexerErrorBase &) = delete;
+  LexerErrorBase(LexerErrorBase &&) = delete;
+  auto operator=(const LexerErrorBase &) -> LexerErrorBase & = delete;
+  auto operator=(LexerErrorBase &&) -> LexerErrorBase & = delete;
   virtual ~LexerErrorBase() = default;
 };
 } // namespace meta_compiler::lex::error
